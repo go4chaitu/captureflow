@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>true</direct>
+        <endpoint>x_snc_uml_draw.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<script src="/x_snc_uml.webfont.jsdbx" ></script>
+	<script src="/x_snc_uml.snap.svg.jsdbx" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+	<script src="/x_snc_uml.sequencediagram.jsdbx" ></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link href="/fc441e27dbd12700d3bad400cf9619cd.cssdbx" rel="stylesheet" ></link>
+	<style>
+		.storyscript {
+		width: 20vw;
+		height: 90vh;      
+		}
+
+		.main-ul {
+		display: flex;
+		float: left;
+		width: 100vw;
+		}
+		.script-area {
+		display: inline-grid;
+		}
+		.dia-area {
+		display: flex;
+		margin-left: 2vw;
+		overflow-x: auto;
+		overflow-y: auto;
+		}
+		.refreshDia {
+		height: 5vh;
+		width: 20vw;
+		background-color: coral;
+		}
+	</style>
+	
+	<ul class="main-ul">
+	  <li class="script-area">
+		  <button class="refreshDia" onclick="reloadDiagram()">Refresh Diagram</button>        
+		  <textarea class="storyscript" placeholder="Write your story script..."></textarea>      
+	  </li>
+	  <li class="dia-area">
+		  <div id="diagram">
+			  <div id="dia-content"/>
+		  </div>
+	  </li>
+	</ul>
+	<p/>
+
+	<script>
+	  function reloadDiagram() {
+		  var storyScript = $(".storyscript").val();        
+		var diagram = Diagram.parse(storyScript);
+		$("#dia-content").remove();
+		$("#diagram").append("<div id='dia-content'></div>");
+		diagram.drawSVG("dia-content", {theme: 'hand'});		
+	  }
+
+	  var diagram = Diagram.parse("A->B: Message");
+	  diagram.drawSVG("dia-content", {theme: 'hand'});
+	</script>
+</j:jelly>]]></html>
+        <name>draw</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-28 05:39:40</sys_created_on>
+        <sys_id>2f731627dbd12700d3bad400cf961905</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>draw</sys_name>
+        <sys_package display_value="UML" source="x_snc_uml">ef51d2a3dbd12700d3bad400cf9619c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="UML">ef51d2a3dbd12700d3bad400cf9619c8</sys_scope>
+        <sys_update_name>sys_ui_page_2f731627dbd12700d3bad400cf961905</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-28 05:50:25</sys_updated_on>
+    </sys_ui_page>
+</record_update>

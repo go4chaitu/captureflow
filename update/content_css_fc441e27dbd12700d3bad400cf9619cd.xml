@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="content_css">
+    <content_css action="INSERT_OR_UPDATE">
+        <name>sequencediagram</name>
+        <style>/** js sequence diagrams&#13;
+ *  https://bramp.github.io/js-sequence-diagrams/&#13;
+ *  (c) 2012-2017 Andrew Brampton (bramp.net)&#13;
+ *  Simplified BSD license.&#13;
+ */&#13;
+@font-face{font-family:'danielbd';src:url(danielbd.woff2) format('woff2'),url(danielbd.woff) format('woff');font-weight:normal;font-style:normal}</style>
+        <sys_class_name>content_css</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-10-28 05:41:38</sys_created_on>
+        <sys_id>fc441e27dbd12700d3bad400cf9619cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sequencediagram</sys_name>
+        <sys_package display_value="UML" source="x_snc_uml">ef51d2a3dbd12700d3bad400cf9619c8</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="UML">ef51d2a3dbd12700d3bad400cf9619c8</sys_scope>
+        <sys_update_name>content_css_fc441e27dbd12700d3bad400cf9619cd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-10-28 05:41:38</sys_updated_on>
+        <type>local</type>
+        <url/>
+    </content_css>
+</record_update>
